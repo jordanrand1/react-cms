@@ -1,0 +1,17 @@
+.group {
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.add {
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.show {
+    transition: 0.5s;
+    opacity: 1;
+    visibility: visible;
+}
