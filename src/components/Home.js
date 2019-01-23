@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Button, Container, Icon, Card, Image } from 'semantic-ui-react';
 import { styles, hidden } from 'ansi-colors';
 import styled from 'styled-components';
+import "../home.css";
 
 function Home() {
     const [choices, setChoices] = useState(false);
@@ -20,7 +21,9 @@ function Home() {
     function displayItems() {
         return (
             <>
-                <Button floated="left" onClick={() => setChoices(false)}>Back</Button>
+                <Button id="back" floated="left" onClick={() => setChoices(false)}>
+                    <Icon id="back-button-icon" name="arrow left" size="big"></Icon>
+                </Button>
                 <CGroup>
                     <Card>
                     <Card.Content>
@@ -45,7 +48,7 @@ function Home() {
     return (
         <Container>
             {choices ? displayItems() :
-            <Button fluid onClick={() => setChoices(true)}>
+            <Button  id="new-section" fluid onClick={() => setChoices(true)}>
                 <Icon name="plus circle" size="huge"></Icon>
             </Button>
             }

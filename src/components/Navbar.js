@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Input, Menu, Checkbox } from 'semantic-ui-react'
+import { Input, Menu, Checkbox } from 'semantic-ui-react';
+import "../navbar.css";
 
 function Navbar() {
     let [edit, setEdit] = useState(false);
@@ -13,7 +14,7 @@ function Navbar() {
         return (
             <>
                 <Menu secondary>
-                    <Menu.Item name='home' active={activeItem === 'home'} onClick={() => handleItemClick('home')} />
+                    <Menu.Item name='home' active={activeItem === 'home'} onClick={() => handleItemClick('home')}/>
                     <Menu.Item
                     name='messages'
                     active={activeItem === 'messages'}
@@ -42,7 +43,7 @@ function Navbar() {
     function normalView() {
         return (
             <>
-                <Menu secondary>
+                <Menu secondary className="tabs">
                     <Menu.Item name='home' active={activeItem === 'home'} onClick={() => handleItemClick('home')} />
                     <Menu.Item
                     name='messages'
